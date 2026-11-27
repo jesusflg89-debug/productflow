@@ -1,0 +1,895 @@
+/* ==========================================
+   PRODUCTFLOW
+   styles.css
+========================================== */
+
+:root {
+  --primary: #155e75;
+  --primary-dark: #0f3443;
+  --primary-light: #e8f4f7;
+
+  --success: #238636;
+  --success-light: #eaf7ed;
+
+  --warning: #d99a00;
+  --danger: #c62828;
+
+  --background: #eef2f6;
+  --surface: #ffffff;
+
+  --text: #243447;
+  --text-light: #64748b;
+
+  --border: #d7e0e8;
+
+  --shadow: 0 8px 24px rgba(15, 52, 67, 0.12);
+
+  --radius: 12px;
+}
+
+
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  line-height: 1.6;
+
+  color: var(--text);
+  background-color: var(--background);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+
+  color: white;
+  background-color: var(--primary);
+
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+
+/* ==========================================
+   LOGIN Y REGISTRO
+========================================== */
+
+.pagina-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-dark),
+      var(--primary)
+    );
+}
+
+
+/* Contenedor */
+
+.login-container {
+  width: 100%;
+  max-width: 460px;
+}
+
+
+/* Tarjeta */
+
+.login-card {
+  padding: 38px;
+
+  background-color: var(--surface);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 16px 40px
+    rgba(0, 0, 0, 0.20);
+}
+
+
+/* Encabezado */
+
+.login-header {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.login-header .logo {
+  margin:
+    0 auto
+    15px;
+}
+
+.login-header h1 {
+  color: var(--primary-dark);
+
+  font-size: 2rem;
+}
+
+.login-header p {
+  margin-top: 6px;
+
+  color: var(--text-light);
+}
+
+
+/* ==========================================
+   FORMULARIOS
+========================================== */
+
+form h2 {
+  margin-bottom: 22px;
+
+  color: var(--primary-dark);
+
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 19px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  color: var(--text);
+  background-color: white;
+
+  border:
+    2px solid
+    var(--border);
+
+  border-radius: 7px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.form-group textarea {
+  min-height: 100px;
+
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(21, 94, 117, 0.15);
+}
+
+
+/* Fila precio / existencia */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+
+/* Checkbox */
+
+.checkbox-group {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+
+  accent-color: var(--primary);
+}
+
+
+/* ==========================================
+   BOTÓN PRINCIPAL
+========================================== */
+
+.btn-primary {
+  width: 100%;
+
+  padding: 13px 20px;
+
+  color: white;
+  background-color: var(--primary);
+
+  border: none;
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* ==========================================
+   LOGIN FOOTER
+========================================== */
+
+.login-footer {
+  margin-top: 25px;
+
+  color: var(--text-light);
+
+  text-align: center;
+}
+
+.login-footer a {
+  color: var(--primary);
+
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================
+   MENSAJES
+========================================== */
+
+.mensaje {
+  min-height: 24px;
+
+  margin: 10px 0;
+
+  color: var(--danger);
+
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.mensaje.exito {
+  color: var(--success);
+}
+
+
+/* ==========================================
+   HEADER DEL DASHBOARD
+========================================== */
+
+.main-header {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-dark),
+      var(--primary)
+    );
+
+  box-shadow:
+    0 3px 12px
+    rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  width: 92%;
+  max-width: 1100px;
+
+  margin: auto;
+  padding: 18px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* Marca */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.brand .logo {
+  background-color:
+    rgba(255, 255, 255, 0.15);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.30);
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+}
+
+.brand p {
+  color: #d7ebf0;
+
+  font-size: 0.85rem;
+}
+
+
+/* Usuario */
+
+.user-area {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+#nombre-usuario {
+  font-weight: bold;
+}
+
+
+/* Cerrar sesión */
+
+.btn-logout {
+  padding: 9px 15px;
+
+  color: white;
+  background-color: transparent;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.65);
+
+  border-radius: 6px;
+
+  font-weight: bold;
+}
+
+.btn-logout:hover {
+  color: var(--primary-dark);
+  background-color: white;
+}
+
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+========================================== */
+
+.dashboard-container {
+  width: 92%;
+  max-width: 1050px;
+
+  margin: 35px auto;
+}
+
+
+/* ==========================================
+   BIENVENIDA
+========================================== */
+
+.welcome-section {
+  margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+  color: var(--primary-dark);
+
+  font-size: 2rem;
+}
+
+.welcome-section p {
+  color: var(--text-light);
+}
+
+
+/* ==========================================
+   TARJETAS PRINCIPALES
+========================================== */
+
+.product-form-card,
+.summary-section,
+.products-section {
+  margin-bottom: 25px;
+
+  padding: 28px;
+
+  background-color: var(--surface);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.product-form-card h2,
+.summary-section h2,
+.products-section h2 {
+  margin-bottom: 20px;
+
+  color: var(--primary-dark);
+}
+
+
+/* ==========================================
+   RESUMEN
+========================================== */
+
+.summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.summary-card {
+  padding: 25px 15px;
+
+  text-align: center;
+
+  background-color: var(--primary-light);
+
+  border-left:
+    5px solid
+    var(--primary);
+
+  border-radius: 9px;
+}
+
+.summary-card.active {
+  background-color:
+    var(--success-light);
+
+  border-left-color:
+    var(--success);
+}
+
+.summary-card.stock {
+  background-color: #fff8df;
+
+  border-left-color:
+    var(--warning);
+}
+
+.summary-number {
+  display: block;
+
+  color: var(--primary-dark);
+
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.summary-label {
+  color: var(--text-light);
+
+  font-weight: bold;
+}
+
+
+/* ==========================================
+   LISTA DE PRODUCTOS
+========================================== */
+
+.products-header {
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.products-header h2 {
+  margin-bottom: 0;
+}
+
+.products-list {
+  display: grid;
+
+  gap: 15px;
+}
+
+
+/* Producto */
+
+.product-card {
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  background-color: #f8fafc;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-left:
+    5px solid
+    var(--primary);
+
+  border-radius: 9px;
+}
+
+.product-card.inactive {
+  opacity: 0.75;
+
+  border-left-color:
+    var(--text-light);
+}
+
+
+/* Información */
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  margin-bottom: 5px;
+
+  color: var(--primary-dark);
+}
+
+.product-description {
+  margin-bottom: 10px;
+
+  color: var(--text-light);
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 15px;
+
+  color: var(--text-light);
+
+  font-size: 0.9rem;
+}
+
+
+/* Estados */
+
+.product-status {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  color: #145c30;
+  background-color: #d6f0dd;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.product-card.inactive
+.product-status {
+  color: #5d6670;
+
+  background-color: #e7ebef;
+}
+
+
+/* ==========================================
+   ACCIONES
+========================================== */
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 5px;
+
+  font-weight: bold;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-edit {
+  color: #382b00;
+
+  background-color: #f2b705;
+}
+
+.btn-delete {
+  color: white;
+
+  background-color: var(--danger);
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 0.86;
+
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   BOTÓN SECUNDARIO
+========================================== */
+
+.btn-secondary {
+  padding: 9px 15px;
+
+  color: var(--primary);
+  background-color: transparent;
+
+  border:
+    2px solid
+    var(--primary);
+
+  border-radius: 6px;
+
+  font-weight: bold;
+}
+
+.btn-secondary:hover {
+  color: white;
+  background-color: var(--primary);
+}
+
+
+/* ==========================================
+   LISTA VACÍA
+========================================== */
+
+.empty-message {
+  padding: 25px;
+
+  color: var(--text-light);
+
+  text-align: center;
+  font-style: italic;
+
+  background-color: #f8fafc;
+
+  border:
+    2px dashed
+    var(--border);
+
+  border-radius: 8px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.main-footer {
+  margin-top: 40px;
+  padding: 25px 15px;
+
+  color: #d7ebf0;
+  background-color: var(--primary-dark);
+
+  text-align: center;
+
+  font-size: 0.9rem;
+}
+
+
+/* ==========================================
+   ACCESIBILIDAD
+========================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline:
+    3px solid
+    #ffbf47;
+
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 800px) {
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .product-actions {
+    width: 100%;
+  }
+
+}
+
+
+/* ==========================================
+   MÓVIL
+========================================== */
+
+@media (max-width: 600px) {
+
+  /* Login y registro */
+
+  .pagina-login {
+    padding: 20px 12px;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+  }
+
+  .login-header h1 {
+    font-size: 1.7rem;
+  }
+
+
+  /* Header */
+
+  .header-container {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .user-area {
+    width: 100%;
+
+    justify-content:
+      space-between;
+  }
+
+
+  /* Dashboard */
+
+  .dashboard-container {
+    width: 94%;
+
+    margin: 20px auto;
+  }
+
+  .product-form-card,
+  .summary-section,
+  .products-section {
+    padding: 20px;
+  }
+
+  .welcome-section h2 {
+    font-size: 1.7rem;
+  }
+
+
+  /* Precio / stock */
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Lista */
+
+  .products-header {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+  }
+
+}

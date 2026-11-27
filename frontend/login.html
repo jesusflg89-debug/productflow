@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Iniciar sesión | ProductFlow</title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+</head>
+
+
+<body class="pagina-login">
+
+  <main class="login-container">
+
+    <section class="login-card">
+
+
+      <!-- =====================================
+           ENCABEZADO
+      ====================================== -->
+
+      <div class="login-header">
+
+        <div
+          class="logo"
+          aria-hidden="true"
+        >
+          PF
+        </div>
+
+        <h1>
+          ProductFlow
+        </h1>
+
+        <p>
+          Gestión segura de productos
+        </p>
+
+      </div>
+
+
+      <!-- =====================================
+           FORMULARIO DE LOGIN
+      ====================================== -->
+
+      <form id="login-form">
+
+        <h2>
+          Iniciar sesión
+        </h2>
+
+
+        <!-- Correo electrónico -->
+
+        <div class="form-group">
+
+          <label for="email">
+            Correo electrónico
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ejemplo@correo.com"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+
+        <!-- Contraseña -->
+
+        <div class="form-group">
+
+          <label for="password">
+            Contraseña
+          </label>
+
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Ingresa tu contraseña"
+            autocomplete="current-password"
+            minlength="6"
+            required
+          >
+
+        </div>
+
+
+        <!-- Mensajes -->
+
+        <p
+          id="mensaje-login"
+          class="mensaje"
+          role="alert"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- Botón -->
+
+        <button
+          type="submit"
+          class="btn-primary"
+        >
+          Iniciar sesión
+        </button>
+
+      </form>
+
+
+      <!-- =====================================
+           PIE
+      ====================================== -->
+
+      <div class="login-footer">
+
+        <p>
+          ¿No tienes una cuenta?
+
+          <a href="register.html">
+            Crear cuenta
+          </a>
+        </p>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- JavaScript -->
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
