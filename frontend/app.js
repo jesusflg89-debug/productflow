@@ -8,8 +8,10 @@
 // CONFIGURACIÓN DE LA API
 // ==========================================
 
-const API_URL = "http://localhost:3000/api";
+//const API_URL = "http://localhost:3000/api";
 
+const API_URL =
+  "https://productflow-backend-mr7v.onrender.com/api";
 
 // ==========================================
 // ADMINISTRACIÓN DE LA SESIÓN
